@@ -1,0 +1,116 @@
+<header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 18" width="18px" height="18px">
+            <path d="M18 13v2a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2v9h14V5h2v8zm-4-4H4V3h10v6zM4 15h14v-2H4v2zM4 9h14V7H4v2z"/>
+          </svg>
+        </span>
+      </label>
+      <div class="trigger">
+        <a class="page-link" href="{{ "/" | relative_url }}">首页</a>
+        <a class="page-link" href="{{ "/about" | relative_url }}">关于</a>
+        <a class="page-link" href="{{ "/tags" | relative_url }}">标签</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+.site-header {
+  border-top: 5px solid #424242;
+  border-bottom: 1px solid #e8e8e8;
+  min-height: 56px;
+  position: relative;
+  background-color: #fff;
+}
+
+.site-title {
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 56px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
+  color: #424242;
+  text-decoration: none;
+}
+
+.site-nav {
+  float: right;
+  line-height: 56px;
+}
+
+.nav-trigger {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.trigger {
+  padding-left: 20px;
+  float: left;
+  line-height: 56px;
+}
+
+.page-link {
+  color: #424242;
+  line-height: 1.5;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+.page-link:hover {
+  color: #0085a1;
+}
+
+@media screen and (max-width: 600px) {
+  .menu-icon {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 26px;
+    line-height: 0;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .nav-trigger {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 26px;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .nav-trigger:checked ~ .trigger {
+    display: block;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0;
+    margin: 0;
+    float: none;
+  }
+
+  .page-link {
+    display: block;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #e8e8e8;
+  }
+}
+</style> 

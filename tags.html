@@ -1,0 +1,52 @@
+---
+layout: page
+title: 文章标签
+permalink: /tags/
+---
+
+<div class="tags">
+  {% assign tags = site.tags | sort %}
+  {% for tag in tags %}
+    <div class="tag-group">
+      {% capture tag_name %}{{ tag | first }}{% endcapture %}
+      <h3 id="{{ tag_name | slugize }}">{{ tag_name }}</h3>
+      <ul>
+        {% for post in site.tags[tag_name] %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+.tags {
+  margin: 2em 0;
+}
+.tag-group {
+  margin-bottom: 2em;
+}
+.tag-group h3 {
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+.tag-group ul {
+  list-style: none;
+  padding-left: 0;
+}
+.tag-group li {
+  margin-bottom: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post-date {
+  color: #666;
+  font-size: 0.9em;
+}
+</style> 
