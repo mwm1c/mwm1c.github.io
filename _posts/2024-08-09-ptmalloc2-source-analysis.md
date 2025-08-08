@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "ptmalloc2源码分析"
-date:   2024-04-09 10:00:00 +0800
+title:  "ptmalloc2源码分析（副本）"
+date:   2024-08-09 10:00:00 +0800
 categories: blog
 tags: [Linux, 内存管理]
 ---
+
 
 # 1. malloc函数入口
 直接在glibc中查找malloc函数的话是找不到的 ，因为malloc只是一个alias，真正的实现函数名是__libc_malloc :

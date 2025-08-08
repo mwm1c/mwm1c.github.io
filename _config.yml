@@ -31,6 +31,16 @@ github_username: mwm1c
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# 显示未来日期的文章
+future: true
+
+# 确保显示所有文章
+limit_posts: 0
+show_drafts: true
+unpublished: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Linux中的Slab分配器"
-date:   2025-05-13 10:00:00 +0800
+date:   2024-05-13 10:00:00 +0800
 categories: blog
 tags: [内核开发, 内存管理]
 ---
